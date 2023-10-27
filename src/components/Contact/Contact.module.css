@@ -3,6 +3,7 @@
   flex-direction: row-reverse;
   justify-content: space-between;
   margin: 1rem auto 2rem auto;
+  gap: 2rem;
 }
 
 .contactWrapper h2 {
