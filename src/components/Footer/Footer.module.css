@@ -1,0 +1,8 @@
+.footerWrapper {
+  text-align: center;
+  margin: 8rem auto 2rem auto;
+}
+
+.footerWrapper hr {
+  margin-bottom: 1rem;
+}

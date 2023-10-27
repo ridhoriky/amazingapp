@@ -1,0 +1,132 @@
+.contactWrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin: 1rem auto 2rem auto;
+}
+
+.contactWrapper h2 {
+  margin-bottom: 1rem;
+}
+
+.formHorizontal {
+  flex-basis: 50%;
+  margin: auto;
+}
+
+.formControl {
+  width: 350px;
+  background-color: var(--grey);
+  color: var(--light);
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 2px solid var(--light);
+  padding: 5px 5px;
+  outline: none;
+}
+
+.btnSend {
+  display: block;
+  margin: auto;
+  width: 350px;
+  font-size: 1rem;
+  padding: 0.2rem 0.8rem;
+  border-radius: 0.4rem;
+  background-color: var(--blue);
+  color: var(--light);
+  border: 2px solid var(--blue);
+  box-shadow: 1px 1px 2px var(--blue);
+}
+
+.btnSend:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 18px var(--blue);
+  transition: 0.2s;
+}
+
+.contact {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contactList {
+  margin-top: 2rem;
+}
+
+.listItem {
+  list-style: none;
+  margin: auto;
+  width: 280px;
+  justify-content: center;
+}
+
+.email {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 5px 10px;
+  background: var(--grey);
+  border-radius: 10px;
+}
+
+.place {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 5px 10px;
+  background: var(--grey);
+  border-radius: 10px;
+}
+
+.socialMediaList {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 2rem auto;
+}
+
+.contactIcon {
+  border: 2px solid transparent;
+  padding: 19px 10px 3px 10px;
+  border-radius: 0.4rem;
+}
+
+.contactIcon:hover {
+  border-color: var(--blue);
+  box-shadow: 1px 1px 14px var(--blue);
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 1200px) {
+  .contactWrapper {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .contact {
+    width: 450px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    width: 350px;
+  }
+
+  .formHorizontal {
+    width: 350px;
+  }
+  .formControl {
+    width: 350px;
+  }
+
+  .btnSend {
+    width: 350px;
+  }
+}

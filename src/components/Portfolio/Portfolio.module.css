@@ -1,0 +1,178 @@
+.subTitle {
+  margin-top: 2rem;
+}
+
+.containerCard {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  box-shadow: 0 0 5px 0 var(--blue);
+  -webkit-box-shadow: 0 0 10px 0 var(--blue);
+  -moz-box-shadow: 0 0 5px 0 var(--blue);
+  background: var(--dark);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  margin: 1rem auto;
+  width: 100%;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.card img {
+  box-shadow: 1px 1px 6px var(--blue);
+  width: 45%;
+  margin: 1rem;
+  min-height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.projectDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  width: 100%;
+  margin: 1rem;
+  padding: 0 1rem;
+}
+
+.title {
+  height: 20%;
+}
+
+.title h2 {
+  margin-bottom: 1rem;
+  font-family: "Berkshire Swash", cursive;
+  font-size: 2rem;
+  font-weight: lighter;
+  color: var(--light);
+}
+
+.techStacks {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.stack {
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.4rem;
+  background: var(--grey);
+  box-shadow: 2px 2px var(--blue);
+}
+
+.btn {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.btnCode {
+  margin-right: 2rem;
+  font-size: 1rem;
+  padding: 0.2rem 0.8rem;
+  border-radius: 0.4rem;
+  background-color: var(--blue);
+  color: var(--light);
+  border: 2px solid var(--blue);
+  box-shadow: 1px 1px 2px var(--blue);
+}
+
+.btnCode:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 18px var(--blue);
+  transition: 0.2s;
+}
+
+.btnLiveDemo {
+  font-size: 1rem;
+  padding: 0.2rem 0.8rem;
+  border-radius: 0.4rem;
+  background-color: var(--dark);
+  color: var(--blue);
+  border: 2px solid var(--blue);
+}
+
+.btnLiveDemo:hover {
+  background-color: var(--blue);
+  color: var(--light);
+  box-shadow: 1px 1px 18px var(--blue);
+  transition: 0.2s;
+}
+
+.desc {
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+  height: 55%;
+  opacity: 0.7;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .subTitle {
+    text-align: center;
+  }
+  .card {
+    flex-direction: column;
+    width: 400px;
+  }
+
+  .card img {
+    width: 92%;
+  }
+
+  .projectDetails {
+    width: 92%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .card {
+    width: fit-content;
+  }
+
+  .stack {
+    font-size: 0.8rem;
+  }
+
+  .desc {
+    font-size: 0.8rem;
+    padding: auto;
+  }
+
+  .btn {
+    align-items: center;
+    justify-content: center;
+    gap: none;
+  }
+
+  .btnCode,
+  .btnLiveDemo {
+    scale: 0.8;
+    margin-right: 0;
+  }
+}

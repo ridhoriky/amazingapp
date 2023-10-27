@@ -1,0 +1,141 @@
+.row {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  gap: 6rem;
+  margin-bottom: 5rem;
+}
+
+.skills h2 {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.skills h2 span {
+  color: var(--blue);
+  text-shadow: 1px 1px 4px var(--blue);
+}
+
+.techIcons {
+  margin: auto;
+  max-width: 400px;
+  min-width: 350px;
+  gap: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.tech {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 150px;
+}
+
+.aboutText {
+  max-width: 550px;
+}
+
+.aboutText h2 {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--light);
+}
+
+.aboutText h2 span {
+  color: var(--blue);
+  text-shadow: 1px 1px 4px var(--blue);
+}
+
+.aboutText p {
+  margin-bottom: 1rem;
+  color: var(--light);
+}
+
+.aboutText p span {
+  color: var(--blue);
+  text-shadow: 1px 1px 4px var(--blue);
+}
+
+.btn {
+  margin-top: 3rem;
+}
+
+.btnHireMe {
+  margin-right: 2rem;
+  font-size: 1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+  background-color: var(--blue);
+  color: var(--light);
+  border: 2px solid var(--blue);
+  box-shadow: 1px 1px 2px var(--blue);
+}
+
+.btnHireMe:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 18px var(--blue);
+  transition: 0.2s;
+}
+
+.btnDownloadCV {
+  font-size: 1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+  background-color: var(--dark);
+  color: var(--blue);
+  border: 2px solid var(--blue);
+}
+
+.btnDownloadCV:hover {
+  background-color: var(--blue);
+  color: var(--light);
+  box-shadow: 1px 1px 18px var(--blue);
+  transition: 0.2s;
+}
+
+@media screen and (max-width: 1200px) {
+  .row {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .aboutText {
+    width: 450px;
+    margin: auto;
+  }
+
+  .skills {
+    text-align: center;
+    gap: 0;
+  }
+
+  .skills span {
+    font-weight: bold;
+  }
+
+  .techIcons {
+    margin-top: 1rem;
+    scale: 0.8;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btnHireMe,
+  .btnDownloadCV {
+    margin-right: 1rem;
+    width: fit-content;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .aboutText {
+    width: 350px;
+  }
+}

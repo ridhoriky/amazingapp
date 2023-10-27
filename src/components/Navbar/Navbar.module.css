@@ -1,0 +1,123 @@
+.container {
+  position: sticky;
+  z-index: 99;
+  top: 0;
+}
+
+.nav {
+  width: 100%;
+  padding: 0 4%;
+  margin: auto;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.scroll {
+  background: var(--dark);
+  box-shadow: 1px 1px 4px var(--light);
+}
+
+.navLogo {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 20;
+}
+
+.navLogo p {
+  color: var(--light);
+  font-family: "Berkshire Swash", cursive;
+  font-size: 1.5rem;
+}
+
+.navLogo p span {
+  color: var(--blue);
+  font-family: "Berkshire Swash", cursive;
+}
+
+.navLogo img {
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+}
+
+.navItems {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 1rem;
+  gap: 2rem;
+}
+
+.navItems li {
+  list-style-type: none;
+  text-transform: capitalize;
+  color: var(--light);
+}
+
+.navItems li :hover {
+  cursor: pointer;
+  color: var(--blue);
+  transition: 0.5s;
+  text-shadow: 1px 1px 8px var(--light);
+}
+
+.barItemsMobile {
+  display: none;
+}
+
+.mobileBtn {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navItems {
+    display: none;
+  }
+
+  .barItemsMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    background-color: var(--dark);
+    top: 0;
+    right: 0;
+    left: -100%;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    gap: 4rem;
+    transition: left 1s;
+    z-index: 10;
+  }
+
+  .barItemsMobile li {
+    text-transform: capitalize;
+    cursor: pointer;
+    list-style-type: none;
+  }
+
+  .active {
+    left: 0;
+  }
+
+  .mobileBtn {
+    display: block;
+    color: var(--light);
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    margin-right: 10%;
+    z-index: 99;
+  }
+
+  .mobileBtn:hover {
+    color: var(--blue);
+  }
+}
