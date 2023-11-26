@@ -11,7 +11,7 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');
 
   const changeActiveSection = () => {
-    const sections = ['home', 'about', 'portfolio', 'blog', 'contact'];
+    const sections = ['home', 'about', 'portfolio', 'contact'];
     const scrollPosition = window.scrollY + 200;
 
     for (const section of sections) {
@@ -49,8 +49,7 @@ const Navbar = () => {
     { id: 1, link: 'home' },
     { id: 2, link: 'about' },
     { id: 3, link: 'portfolio' },
-    { id: 4, link: 'blog' },
-    { id: 5, link: 'contact' },
+    { id: 4, link: 'contact' },
   ];
 
   return (
