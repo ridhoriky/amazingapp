@@ -110,24 +110,24 @@
   }
 
   .contact {
-    width: 450px;
+    width: 100%;
     margin: auto;
   }
 }
 
 @media screen and (max-width: 768px) {
   .contact {
-    width: 350px;
+    width: 100%;
   }
 
   .formHorizontal {
-    width: 350px;
+    width: 100%;
   }
   .formControl {
-    width: 350px;
+    width: 100%;
   }
 
   .btnSend {
-    width: 350px;
+    width: 100%;
   }
 }

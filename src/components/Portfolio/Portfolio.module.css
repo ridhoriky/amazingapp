@@ -134,7 +134,7 @@
   }
   .card {
     flex-direction: column;
-    width: 550px;
+    width: 100%;
     padding: 0 1rem;
   }
 
@@ -145,6 +145,8 @@
 
   .projectDetails {
     width: 100%;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -155,7 +157,7 @@
   }
 
   .card {
-    width: fit-content;
+    width: 100%;
   }
 
   .stack {
