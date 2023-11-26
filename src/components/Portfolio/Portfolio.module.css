@@ -36,6 +36,7 @@
   min-height: 300px;
   border-radius: 10px;
   object-fit: cover;
+  object-position: top-left;
 }
 
 .projectDetails {
@@ -54,7 +55,7 @@
 
 .title h2 {
   margin-bottom: 1rem;
-  font-family: "Berkshire Swash", cursive;
+  font-family: 'Berkshire Swash', cursive;
   font-size: 2rem;
   font-weight: lighter;
   color: var(--light);
@@ -133,15 +134,17 @@
   }
   .card {
     flex-direction: column;
-    width: 400px;
+    width: 550px;
+    padding: 0 1rem;
   }
 
   .card img {
-    width: 92%;
+    width: 100%;
+    margin: 1rem auto;
   }
 
   .projectDetails {
-    width: 92%;
+    width: 100%;
   }
 }
 

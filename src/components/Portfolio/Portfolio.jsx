@@ -1,55 +1,61 @@
-import React from "react";
-import styles from "./Portfolio.module.css";
-import { Link } from "react-scroll";
-import img from "../../images/about_img.jpg";
+import React from 'react';
+import styles from './Portfolio.module.css';
+import imageGofilm from '../../images/gofilm.png';
+import imageTastyBites from '../../images/tastybites.png';
+import imageEasyRent from '../../images/easyRent.png';
 
 const Portfolio = () => {
-  const portfolio = [
+  const portoDesc = [
     {
       id: 1,
-      title: "Shopedia",
-      description: "lorem fjdsg dkfnsjdkf dfkngskn fdkjgkfdng iaf sjos",
-      tech: ["React", "Tailwind"],
-      link: "/shopedia",
+      title: 'GoFilm',
+      description:
+        'A film website is an online platform designed for showcasing and exploring a curated collection of movies. The website offers a visually appealing and user-friendly interface, allowing film enthusiasts to explore and appreciate a diverse selection of cinematic works.',
+      tech: ['Vite', 'React', 'TailwindCss', 'Firebase'],
+      img: imageGofilm,
+      link: 'https://go-film-six.vercel.app/',
+      github: 'https://github.com/ridhoriky/GoFilm',
     },
     {
       id: 2,
-      title: "Shopedia",
+      title: 'Tasty Bites',
       description:
-        "lorem fjdsg dkfnsjdkf dfkngskn fdkjgkfdng iaf sjoslorem fjdsg dkfnsjdkf dfkngskn fdkjgkfdng iaf sjoslorem fjdsg dkfnsjdkf dfkngskn fdkjgkfdng iaf sjos",
-      tech: ["React", "Tailwind"],
-      link: "/shopedia",
-      github: "/ridhoriky",
+        'A recipe discovery platform is a digital space where users can explore and find a wide array of delightful recipes for various cuisines and occasions. The platform offers an intuitive interface for searching and categorizing recipes, making it easy for users to discover and savor new culinary delights.',
+      tech: ['Vite', 'React', 'TailwindCss'],
+      img: imageTastyBites,
+      link: 'https://tasty-bites-nu.vercel.app/',
+      github: 'https://github.com/ridhoriky/Tasty-Bites',
     },
     {
       id: 3,
-      title: "Shopedia",
-      description: "lorem ipdum doloe sir amer",
-      tech: ["React", "Tailwind"],
-      link: "/shopedia",
-      github: "/ridhoriky",
+      title: 'EasyRent',
+      description:
+        'A car rental platform is a digital space where users can explore and discover a diverse range of vehicles for various purposes and occasions. The platform provides an intuitive interface for searching and categorizing rental options, simplifying the process for users to find and enjoy the perfect vehicle for their needs.',
+      tech: ['Vite', 'React', 'SCSS'],
+      img: imageEasyRent,
+      link: 'https://github.com/ridhoriky/',
+      github: 'https://github.com/mwww/EasyRent',
     },
   ];
   return (
     <div className="container">
       <div name="portfolio" className="title">
-        - Project
+        - Portfolio
       </div>
       <p className={styles.subTitle}>
         All project are either forked and initiated by me on github
       </p>
       <div className={styles.containerCard}>
-        {portfolio.map((project, index) => {
+        {portoDesc.map((project, index) => {
           return (
             <div
               key={index}
               className={
                 index % 2
-                  ? [styles.card, styles.reverse].join(" ")
+                  ? [styles.card, styles.reverse].join(' ')
                   : styles.card
-              }
-            >
-              <img src={img} alt={portfolio.title} />
+              }>
+              <img src={project.img} alt={project.title} />
               <div className={styles.projectDetails}>
                 <div className={styles.title}>
                   <h2>{project.title}</h2>
@@ -65,12 +71,20 @@ const Portfolio = () => {
                 </div>
                 <p className={styles.desc}>{project.description}</p>
                 <div className={styles.btn}>
-                  <Link className={styles.btnCode} to={project.github}>
+                  <a
+                    className={styles.btnCode}
+                    target="_blank"
+                    rel="noreferrer"
+                    href={project.github}>
                     Code
-                  </Link>
-                  <Link className={styles.btnLiveDemo} to={project.link}>
+                  </a>
+                  <a
+                    className={styles.btnLiveDemo}
+                    target="_blank"
+                    rel="noreferrer"
+                    href={project.link}>
                     Live Demo
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>

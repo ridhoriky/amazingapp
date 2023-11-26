@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./About.module.css";
+import React from 'react';
+import styles from './About.module.css';
 import {
   BiLogoHtml5,
   BiLogoCss3,
@@ -9,8 +9,8 @@ import {
   BiLogoGithub,
   BiLogoReact,
   BiLogoNodejs,
-} from "react-icons/bi";
-import { Link } from "react-scroll";
+} from 'react-icons/bi';
+import { Link } from 'react-scroll';
 
 const About = () => {
   return (
@@ -62,13 +62,11 @@ const About = () => {
             Riky <span>Ridho</span> Pangestu
           </h2>
           <p>
-            I am a web developer with a strong passion for{" "}
-            <span>front-end development</span>.{" "}
-          </p>
-          <p>
-            I am currently working remotely as a frontend developer from
-            Indonesia. I am also open to working with you and excited to
-            contribute my skills and expertise to your projects.
+            I'm a dedicated front-end developer hailing from the beautiful
+            islands of Indonesia. Currently on an exciting journey as a student
+            pursuing a Bachelor's degree in System Information, I am passionate
+            about leveraging technology to create meaningful and visually
+            engaging web experiences.
           </p>
           <div className={styles.btn}>
             <Link type="button" to="contact" className={styles.btnHireMe}>

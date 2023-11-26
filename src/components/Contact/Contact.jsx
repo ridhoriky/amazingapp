@@ -1,14 +1,34 @@
-import React from "react";
-import styles from "./Contact.module.css";
+import React from 'react';
+import styles from './Contact.module.css';
 import {
   BiMap,
   BiMailSend,
-  BiLogoInstagram,
+  BiLogoMedium,
   BiLogoGithub,
   BiLogoLinkedinSquare,
-} from "react-icons/bi";
+} from 'react-icons/bi';
 
 const Contact = () => {
+  const socialLink = [
+    {
+      id: 1,
+      title: 'GitHub',
+      href: 'https://github.com/ridhoriky',
+      logo: BiLogoGithub,
+    },
+    {
+      id: 2,
+      title: 'Medium',
+      href: 'https://medium.com/@ridhoriky25',
+      logo: BiLogoMedium,
+    },
+    {
+      id: 3,
+      title: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/rikyridhopangestu',
+      logo: BiLogoLinkedinSquare,
+    },
+  ];
   return (
     <div className="container">
       <div name="contact" className="title">
@@ -44,15 +64,13 @@ const Contact = () => {
             rows="10"
             placeholder="MESSAGE"
             name="message"
-            required
-          ></textarea>
+            required></textarea>
 
           <button
             className={styles.btnSend}
             id="submit"
             type="submit"
-            value="SEND"
-          >
+            value="SEND">
             Send
           </button>
         </form>
@@ -78,8 +96,7 @@ const Contact = () => {
               <a
                 className={styles.email}
                 href="mailto:#"
-                title="Send me an email"
-              >
+                title="Send me an email">
                 <BiMailSend size={32} />
                 ridhoestu.b@gmail.com
               </a>
@@ -87,21 +104,17 @@ const Contact = () => {
           </ul>
 
           <ul className={styles.socialMediaList}>
-            <li>
-              <a href="/" target="_blank" className={styles.contactIcon}>
-                <BiLogoGithub size={28} />
-              </a>
-            </li>
-            <li>
-              <a href="/" target="_blank" className={styles.contactIcon}>
-                <BiLogoInstagram size={28} />
-              </a>
-            </li>
-            <li>
-              <a href="/" target="_blank" className={styles.contactIcon}>
-                <BiLogoLinkedinSquare size={28} />
-              </a>
-            </li>
+            {socialLink.map((items) => (
+              <li>
+                <a
+                  href={items.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.contactIcon}>
+                  <items.logo size={28} />
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

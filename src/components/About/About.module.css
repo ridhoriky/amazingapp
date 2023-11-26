@@ -53,11 +53,6 @@
   color: var(--light);
 }
 
-.aboutText p span {
-  color: var(--blue);
-  text-shadow: 1px 1px 4px var(--blue);
-}
-
 .btn {
   margin-top: 3rem;
 }

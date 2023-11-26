@@ -1,16 +1,48 @@
-import React from "react";
-import { Link } from "react-scroll";
-import styles from "./Hero.module.css";
-import profile from "../../images/profile.png";
+import React from 'react';
+import { Link } from 'react-scroll';
+import styles from './Hero.module.css';
+import profile from '../../images/profile.png';
 import {
   BiLogoInstagram,
   BiLogoGithub,
   BiLogoLinkedinSquare,
   BiLogoMedium,
   BiLogoYoutube,
-} from "react-icons/bi";
+} from 'react-icons/bi';
 
 const Hero = () => {
+  const socialLink = [
+    {
+      id: 1,
+      title: 'GitHub',
+      href: 'https://github.com/ridhoriky',
+      logo: BiLogoGithub,
+    },
+    {
+      id: 2,
+      title: 'Instagram',
+      href: 'mailto:manricofadli@gmail.com',
+      logo: BiLogoInstagram,
+    },
+    {
+      id: 3,
+      title: 'Medium',
+      href: 'https://medium.com/@ridhoriky25',
+      logo: BiLogoMedium,
+    },
+    {
+      id: 4,
+      title: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/rikyridhopangestu',
+      logo: BiLogoLinkedinSquare,
+    },
+    {
+      id: 5,
+      title: 'Youtube',
+      href: 'https://www.youtube.com/channel/UCLubFr3LpQ4slZPFv6bIU0g',
+      logo: BiLogoYoutube,
+    },
+  ];
   return (
     <div className={styles.container} name="home">
       <div className={styles.heading}>
@@ -26,8 +58,7 @@ const Hero = () => {
           to="portfolio"
           className={styles.btnProject}
           smooth
-          duration={500}
-        >
+          duration={500}>
           See Project
         </Link>
       </div>
@@ -37,22 +68,11 @@ const Hero = () => {
       <div className={styles.socialMedia}>
         <p>Follow Me:</p>
         <div className={styles.socialIcons}>
-          <a href="/" target="_blank">
-            <BiLogoGithub size="28" />
-          </a>
-          <a href="/" target="_blank">
-            <BiLogoLinkedinSquare size="28" />
-          </a>
-          <a href="/" target="_blank">
-            <BiLogoMedium size="28" />
-          </a>
-          <a href="/" target="_blank">
-            <BiLogoInstagram size="28" />
-          </a>
-          <a href="/" target="_blank">
-            {" "}
-            <BiLogoYoutube size="28" />
-          </a>
+          {socialLink.map((items) => (
+            <a href={items.href} target="_blank" rel="noreferrer">
+              <items.logo size="28" />
+            </a>
+          ))}
         </div>
       </div>
     </div>

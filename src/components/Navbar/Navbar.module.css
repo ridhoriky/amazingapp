@@ -6,7 +6,7 @@
 
 .nav {
   width: 100%;
-  padding: 0 4%;
+  padding: 0 20%;
   margin: auto;
   height: 80px;
   display: flex;
@@ -20,23 +20,29 @@
   box-shadow: 1px 1px 4px var(--light);
 }
 
+.activeLink {
+  color: var(--blue) !important;
+  text-shadow: 1px 1px 8px var(--light);
+}
+
 .navLogo {
   height: 64px;
   display: flex;
   align-items: center;
+  margin-left: -1rem;
   gap: 0.5rem;
   z-index: 20;
 }
 
 .navLogo p {
   color: var(--light);
-  font-family: "Berkshire Swash", cursive;
+  font-family: 'Berkshire Swash', cursive;
   font-size: 1.5rem;
 }
 
 .navLogo p span {
   color: var(--blue);
-  font-family: "Berkshire Swash", cursive;
+  font-family: 'Berkshire Swash', cursive;
 }
 
 .navLogo img {
@@ -53,13 +59,13 @@
   gap: 2rem;
 }
 
-.navItems li {
+.menu {
   list-style-type: none;
   text-transform: capitalize;
   color: var(--light);
 }
 
-.navItems li :hover {
+.menu:hover {
   cursor: pointer;
   color: var(--blue);
   transition: 0.5s;
@@ -97,10 +103,9 @@
     z-index: 10;
   }
 
-  .barItemsMobile li {
+  .menu {
     text-transform: capitalize;
     cursor: pointer;
-    list-style-type: none;
   }
 
   .active {
