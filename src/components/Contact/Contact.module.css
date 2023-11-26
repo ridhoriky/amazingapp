@@ -113,10 +113,19 @@
     width: 100%;
     margin: auto;
   }
+
+  .contact p {
+    width: 450px;
+    margin: auto;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .contact {
+    width: 100%;
+  }
+
+  .contact p {
     width: 100%;
   }
 
