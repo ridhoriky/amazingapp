@@ -55,7 +55,9 @@ const Navbar = () => {
   return (
     <div
       className={
-        scroll ? [styles.container, styles.scroll].join(' ') : styles.container
+        scroll
+          ? [styles.containerNav, styles.scroll].join(' ')
+          : styles.containerNav
       }>
       <div className={styles.nav}>
         <a className={styles.navLogo} href="/">

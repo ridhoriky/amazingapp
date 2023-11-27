@@ -103,19 +103,17 @@ const Contact = () => {
             </li>
           </ul>
 
-          <ul className={styles.socialMediaList}>
+          <div className={styles.socialMediaList}>
             {socialLink.map((items) => (
-              <li>
-                <a
-                  href={items.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={styles.contactIcon}>
-                  <items.logo size={28} />
-                </a>
-              </li>
+              <a
+                href={items.href}
+                target="_blank"
+                rel="noreferrer"
+                className={styles.contactIcon}>
+                <items.logo size={28} />
+              </a>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     </div>
