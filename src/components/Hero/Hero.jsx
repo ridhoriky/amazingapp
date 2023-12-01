@@ -54,11 +54,7 @@ const Hero = () => {
           A self-taught front-end developer who specializes in building
           exceptional digital experience.
         </p>
-        <Link
-          to="portfolio"
-          className={styles.btnProject}
-          smooth
-          duration={500}>
+        <Link to="project" className={styles.btnProject} smooth duration={500}>
           See Project
         </Link>
       </div>

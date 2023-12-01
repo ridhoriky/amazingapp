@@ -4,7 +4,7 @@ import { ThemeProvider } from './contexts/ThemeContext';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
-import Portfolio from './components/Portfolio/Portfolio';
+import Project from './components/Project/Project';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 
@@ -14,7 +14,7 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      <Portfolio />
+      <Project />
       <Contact />
       <Footer />
     </ThemeProvider>

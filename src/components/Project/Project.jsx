@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Portfolio.module.css';
+import styles from './Project.module.css';
 import imageGofilm from '../../images/gofilm.png';
 import imageTastyBites from '../../images/tastybites.png';
 import imageEasyRent from '../../images/easyRent.png';
@@ -39,8 +39,8 @@ const Portfolio = () => {
   ];
   return (
     <div className="container">
-      <div name="portfolio" className="title">
-        - Portfolio
+      <div name="project" className="title">
+        - Project
       </div>
       <p className={styles.subTitle}>
         All project are either forked and initiated by me on github
